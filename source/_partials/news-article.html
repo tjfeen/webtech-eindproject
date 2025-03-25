@@ -1,0 +1,15 @@
+<div class="news-article py-5 {{ variant ? 'news-article-variant' : '' }}">
+    <div
+        class="mx-page d-flex align-items-stretch {{ variant ? 'flex-row-reverse' : 'flex-row'}}">
+        <div class="news-article-thumbnail mx-3">
+            <img src="https://picsum.photos/800/800" class="w-100" alt="" />
+        </div>
+        <div class="news-article-content d-flex flex-column mx-3">
+            <h3 class="news-article-title">{{ title }}</h3>
+            <p class="news-article-body">{{ body }}</p>
+            <div class="mt-auto">
+                {% include 'button.html' with { label: 'Read more', variant: 'primary' } %}
+            </div>
+        </div>
+    </div>
+</div>

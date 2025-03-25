@@ -1,0 +1,168 @@
+---
+title: Home
+layout: default
+---
+
+{% block content %}
+<main class="mx-page">
+    <section>
+        <h1>Documents</h1>
+        <p class="prose">This index lists all documents that are current within the OLAC document process. They are
+            listed by type. See also OLAC documents by status and OLAC documents by date, which include documents that
+            have been retired or withdrawn.</p>
+    </section>
+    <section>
+        <h2>Access</h2>
+        <p class="prose">OLAC Standards specify how the Open Language Archives Community operates.</p>
+        <ul class="unstyled">
+            <li>
+                <.>
+                    {% include 'document.html' with { 
+                        title: 'OLAC Metadata (2008-05-31)', 
+                        href: '#', 
+                        filesize: 2700,
+                        description: '
+                            <i>Standard</i>. This document defines the format used by the Open Language Archives Community
+                            OLAC
+                            for the interchange of metadata within the framework of the Open Archives Initiative OAI. The
+                            metadata set
+                            is based on the complete set of Dublin Core metadata terms DCMT, but the format allows for the use
+                            of
+                            extensions to express community-specific qualifiers.'
+                    } %}
+                </div>
+            </li>
+            <li>
+                <.>
+                    {% include 'document.html' with { 
+                        title: 'OLAC Process (2006-04-05)', 
+                        href: '#', 
+                        filesize: 2700,
+                        description: '
+                            <i>Standard</i>. This document summarizes the governing ideas of OLAC (i.e. the purpose,
+                            vision, and
+                            core values) and then describes how OLAC is organized and how it operates.
+                        '
+                    } %}
+                </div>
+            </li>
+            <li>
+                <.>
+                    {% include 'document.html' with { 
+                        title: 'OLAC Repositories (2008-07-28)', 
+                        href: '#', 
+                        filesize: 2700,
+                        description: '
+                            <i>Standard</i>. This document defines the standards OLAC archives must follow in implementing
+                            a metadata repository.
+                        '
+                    } %}
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Recommendations</h2>
+        <p class="prose">OLAC Standards specify how the Open Language Archives Community operates.</p>
+        <ul class="unstyled">
+            <li>
+                <.>
+                    {% include 'document.html' with { 
+                        title: 'OLAC Metadata (2008-05-31)', 
+                        href: '#', 
+                        filesize: 2700,
+                        description: '
+                            <i>Standard</i>. This document defines the format used by the Open Language Archives Community
+                            OLAC
+                            for the interchange of metadata within the framework of the Open Archives Initiative OAI. The
+                            metadata set
+                            is based on the complete set of Dublin Core metadata terms DCMT, but the format allows for the use
+                            of
+                            extensions to express community-specific qualifiers.
+                        '
+                    } %}
+                </div>
+            </li>
+            <li>
+                <.>
+                    {% include 'document.html' with { 
+                        title: 'OLAC Process (2006-04-05)', 
+                        href: '#', 
+                        filesize: 2700,
+                        description: '
+                            <i>Standard</i>. This document summarizes the governing ideas of OLAC (i.e. the purpose,
+                            vision, and
+                            core values) and then describes how OLAC is organized and how it operates.
+                        '
+                    } %}
+                </div>
+            </li>
+            <li>
+                <.>
+                    {% include 'document.html' with { 
+                        title: 'OLAC Repositories (2008-07-28)', 
+                        href: '#', 
+                        filesize: 2700,
+                        description: '
+                            <i>Standard</i>. This document defines the standards OLAC archives must follow in implementing a metadata
+                            repository.
+                        '
+                    } %}
+                </div>
+            </li>
+        </ul>
+
+
+
+
+
+    </section>
+    <section>
+        <h2>Notes</h2>
+        <p class="prose">OLAC Standards specify how the Open Language Archives Community operates.</p>
+
+        <ul class="unstyled">
+            <li>
+                <.>
+                    {% include 'document.html' with { 
+                        title: 'OLAC Metadata (2008-05-31)', 
+                        href: '#', 
+                        filesize: 2700,
+                        description: '
+                            <i>Standard</i>. This document defines the format used by the Open Language Archives Community OLAC
+                            for the interchange of metadata within the framework of the Open Archives Initiative OAI. The
+                            metadata set
+                            is based on the complete set of Dublin Core metadata terms DCMT, but the format allows for the use
+                            of
+                            extensions to express community-specific qualifiers.
+                        '
+                    } %}
+                </div>
+            </li>
+        </ul>
+
+        <.>
+            {% include 'document.html' with { 
+                title: 'OLAC Process (2006-04-05)', 
+                href: '#', 
+                filesize: 2700,
+                description: '
+                    <i>Standard</i>. This document summarizes the governing ideas of OLAC (i.e. the purpose, vision, and
+                    core values) and then describes how OLAC is organized and how it operates.
+                '
+            } %}
+        </div>
+        <div>
+            {% include 'document.html' with { 
+                title: 'OLAC Repositories (2008-07-28)', 
+                href: '#', 
+                filesize: 2700,
+                description: '
+                    <i>Standard</i>. This document defines the standards OLAC archives must follow in implementing a
+                    metadata repository.
+                '
+            } %}
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,0 +1,10 @@
+<div class="document">
+    <div class="d-flex flex-row">
+        <h4>{{ title }}</h4>
+        <span class="mx-1">&bull;</span>
+        <a href="{{ href }}">Download ({{ filesize / 1000 ~ 'MB' }})</a>
+    </div>
+    <p class="prose">
+        {{ description | raw }}
+    </p>
+</div>

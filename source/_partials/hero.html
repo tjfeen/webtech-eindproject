@@ -1,0 +1,41 @@
+{% 
+    set gallery_items = [ 
+        {'img': 'https://picsum.photos/1200/1199', 'location': 'Hong Kong'}, 
+        {'img': 'https://picsum.photos/1200/1199', 'location': 'Pennsylvania'} 
+    ]  
+%}
+<section class="hero d-flex flex-row align-items-stretch overflow-hidden">
+    <div class="hero-main w-100 d-flex flex-column">
+        <div class="mx-page mt-5">
+            <h1 class="hero-title mb-4">Creating a worldwide virtual library of language resources</h1>
+            <p class="mb-4">
+                The Open Languages Archives Community is an international partnership of institutions and
+                individuals
+                who are creating a worldwide virtual library of language resources.
+            </p>
+            {% include 'button.html' with { label: 'Test' } %}
+        </div>
+        <div class="hero-gallery d-flex flex-row w-100 mt-auto py-4 position-relative">
+            <div class="hero-gallery-background"></div>
+            <div class="ms-4 d-flex flex-row w-100">
+                {% for gallery_item in gallery_items %}
+                <div class="hero-gallery-item w-100">
+                    <div class="hero-gallery-item-gradient"></div>
+                    <img src="{{ gallery_item.img }}" alt="" height="800" width="800" class="w-100 h-100">
+                    <span class="hero-gallery-item-label">
+                        <span class="hero-gallery-item-label-icon me-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        </span>
+                        {{ gallery_item.location }}
+                    </span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="hero-side w-100 pb-4">
+        <div class="hero-thumbnail w-100 h-100">
+            <img src="https://picsum.photos/1200/1200" alt="" height="800" width="800" class="h-100">
+        </div>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+---
+title: Home
+layout: default
+---
+
+{% block content %}
+<main>
+    {% include 'hero.html' %}
+    <section class="news-section py-5">
+        <h2 class="position-relative">
+            <span class="ms-4 section-heading-bullet"></span>
+            <span class="ms-page">News</span>
+        </h2>
+        <div class="news-articles">
+            {% include 'news-article.html' with { 
+                title: 'Linguistic Linked Open Data', 
+                body: 'The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is "a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...' 
+            } %}
+            {% include 'news-article.html' with { 
+                title: 'Linguistic Linked Open Data', 
+                body: 'The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is "a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...',
+                variant: true
+            } %}
+            {% include 'news-article.html' with { 
+                title: 'Linguistic Linked Open Data', 
+                body: 'The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is "a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...' 
+            } %}
+        </div>
+    </section>
+    <section class="join-section d-flex flex-row">
+        <div class="d-flex flex-column join-stats">
+            <div class="join-stat d-flex flex-column">
+                <span class="join-stat-number h1">300,000</span>
+                <span class="join-stat-label">archived records</span>
+            </div>
+            <div class="join-stat d-flex flex-column">
+                <span class="join-stat-number h1">7,513</span>
+                <span class="join-stat-label">languages</span>
+            </div>
+        </div>
+        <div class="join-form text-light w-100">
+            <h2 class="h1 mb-3">Join the community</h2>
+            <p class="mb-4">
+                Sign-up for the OLAC mailing list and stay current with standards and best practices for language resource archiving.
+            </p>
+            {% include 'button.html' with { label: 'Sign up now', variant: 'dark' } %}
+        </div>
+    </section>
+</main>
+{% endblock %}
