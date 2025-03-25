@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Search - Sculpin Blog Skeleton</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js" defer></script>
+
+    <!-- Google Fonts (Inter, Hahmlet)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap utility classes (like p-3, mb-5, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-utilities.min.css" integrity="sha512-4ocAKAxnrkSm7MvkkF1D435kko3/HWWvoi/U9+7+ln94B/U01Mggca05Pm3W59BIv3abl0U3MPdygAPLo5aeqg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+                </head>
+
+<body>
+    <header>
+        <nav class="navbar p-2">
+            <div class="d-flex flex-row">
+                <a class="navbar-brand" href="/">
+                    <img src="https://picsum.photos/300/300" alt="OLAC LOGO" height="300" width="300">
+                </a>
+                <div class="m-auto d-flex flex-row">
+                    <a class="nav-link mx-3" href="/">Home</a>
+                    <a class="nav-link mx-3" href="/documents">Documents</a>
+                    <a class="nav-link mx-3" href="/archives">Archives</a>
+                    <a class="nav-link mx-3" href="/news">News</a>
+                    <a class="nav-link mx-3" href="/tools">Tools</a>
+                    <a class="nav-link mx-3" href="/about">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="mx-page mb-5 mt-3" x-data="{
+    params: new URLSearchParams(window.location.search)
+}">
+    <div class="d-flex flex-row w-100">
+        <div class="me-4">
+            <h1>Search results for '<span x-text="params.get('q')"></span>'</h1>
+            <p>
+                Found 3 archives, 1 news article, 2 documents and 0 tools.
+            </p>
+        </div>
+        <div class="ms-auto mt-2">
+            <div class="search-input">
+    <form action="/search" method="GET" class="d-flex flex-row h-100" x-data="{}">
+        <input type="text" name="q" class="search-input-box" placeholder="Search documents, archives, news..." required x-init="if(typeof params !== 'undefined') $el.value = params.get('q')">
+        <button type="submit" class="search-input-button d-flex flex-row align-items-center justify-content-center">
+            <span class="search-input-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+            </span>
+        </button>
+    </form>
+</div>        </div>
+    </div>
+    <section class="mt-4">
+        <h2>Results in Archives</h2>
+        <ul class="unstyled">
+            <li class="mb-3">
+                <div class="list-item">
+    <div class="d-flex flex-row">
+        <h4>Aboriginal Studies Electronic Data Archive (ASEDA)</h4>
+        <span class="mx-1">&bull;</span>
+        <a href="/archives/aboriginal-studies-electronic-data-archive-aseda">Details...</a>
+    </div>
+    <p>
+        Australian Institute of Aboriginal and Torres Strait Islander Studies, Canberra,
+                Australia
+    </p>
+</div>            </li>
+            <li class="mb-3">
+                <div class="list-item">
+    <div class="d-flex flex-row">
+        <h4>California Language Archive</h4>
+        <span class="mx-1">&bull;</span>
+        <a href="/archives/california-language-archive">Details...</a>
+    </div>
+    <p>
+        University of California, Berkeley, Department of Linguistic
+    </p>
+</div>            </li>
+            <li class="mb-3">
+                <div class="list-item">
+    <div class="d-flex flex-row">
+        <h4>AfBo: A world-wide survey of affix borrowing</h4>
+        <span class="mx-1">&bull;</span>
+        <a href="/archives/afbo-a-world-wide-survey-of-affix-borrowing">Details...</a>
+    </div>
+    <p>
+        Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany
+    </p>
+</div>            </li>
+        </ul>
+    </section>
+    <section class="mt-4">
+        <h2>Results in News</h2>
+        <ul class="unstyled">
+            <li class="mb-3">
+                <div class="list-item">
+    <div class="d-flex flex-row">
+        <h4>Linguistic Linked Open Data</h4>
+        <span class="mx-1">&bull;</span>
+        <a href="/news/">Read more...</a>
+    </div>
+    <p>
+        The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked
+                    Data is "a recommended best practice for exposing, sharing, and connecting pieces of data, information,
+                    and knowledge on the Semantic Web using...
+    </p>
+</div>            </li>
+        </ul>
+    </section>
+    <section class="mt-4">
+    <h2>Results in Documents</h2>
+        <ul class="unstyled">
+            <li class="mb-3">
+                <div class="document">
+    <div class="d-flex flex-row">
+        <h4>RE</h4>
+        <span class="mx-1">&bull;</span>
+        <a href="/news/">Download (3.6MB)</a>
+    </div>
+    <p>
+        <i>Standard.</i>This document defines the format used by the Open Language Archives Community OLAC for the interchange of metadata within the framework of the Open Archives Initiative OAI. The metadata set is based on the complete set of Dublin Core metadata terms DCMT, but the format allows for the use of extensions to express community-specific qualifiers.
+    </p>
+</div>            </li>
+            <li class="mb-3">
+                <div class="document">
+    <div class="d-flex flex-row">
+        <h4>OLAC Repositories (2008-07-28)  </h4>
+        <span class="mx-1">&bull;</span>
+        <a href="/news/">Download (5.1MB)</a>
+    </div>
+    <p>
+        <i>Standard.</i>This document defines the standards OLAC archives must follow in implementing a metadata repository.
+    </p>
+</div>            </li>
+        </ul>
+    </section>
+    <section class="mt-4">
+        <h2>Results in Tools</h2>
+        <p>No tools found for '<span x-text="params.get('q')"></span>'.</p>
+    </section>
+</main>
+
+    <footer class="footer py-5 mt-auto">
+    <div class="d-flex flex-row mx-page mb-5">
+        <div class="d-flex flex-column w-100 footer-column">
+            <h5 class="footer-heading">Information</h5>
+            <ul class="footer-items unstyled">
+                <li class="footer-item">
+                    <a href="/" class="footer-link">Home</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/news" class="footer-link">News</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Documents</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/tools" class="footer-link">Tools</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/archives" class="footer-link">Archives</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex flex-column w-100 footer-column">
+            <h5 class="footer-heading">About OLAC</h5>
+            <ul class="footer-items unstyled">
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Organization</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/about" class="footer-link">About</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/services" class="footer-link">Services</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/faq" class="footer-link">FAQ</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/archives" class="footer-link">Archives</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex flex-column w-100 footer-column">
+            <h5 class="footer-heading">Contact OLAC</h5>
+            <ul class="footer-items unstyled">
+                <li class="footer-item">
+                    <a href="mailto:olac-admin@language-archives.org" class="footer-link">olac-admin@language-archives.org</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mx-page">
+        <span>http://www.language-archives.org/</span>
+    </div>
+</footer>
+    <script src="/build/app.js"></script>
+        
+
+        </body>
+
+</html>
