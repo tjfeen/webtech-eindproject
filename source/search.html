@@ -23,7 +23,7 @@ layout: default
         <ul class="unstyled">
             <li class="mb-3">
                 {% include 'list-item.html' with {
-                href: '/archives/aboriginal-studies-electronic-data-archive-aseda',
+                href: site.url ~ '/archives/aboriginal-studies-electronic-data-archive-aseda',
                 title: 'Aboriginal Studies Electronic Data Archive (ASEDA)',
                 description: 'Australian Institute of Aboriginal and Torres Strait Islander Studies, Canberra,
                 Australia'
@@ -31,14 +31,14 @@ layout: default
             </li>
             <li class="mb-3">
                 {% include 'list-item.html' with {
-                href: '/archives/california-language-archive',
+                href: site.url ~ '/archives/california-language-archive',
                 title: 'California Language Archive',
                 description: 'University of California, Berkeley, Department of Linguistic'
                 } %}
             </li>
             <li class="mb-3">
                 {% include 'list-item.html' with {
-                href: '/archives/afbo-a-world-wide-survey-of-affix-borrowing',
+                href: site.url ~ '/archives/afbo-a-world-wide-survey-of-affix-borrowing',
                 title: 'AfBo: A world-wide survey of affix borrowing',
                 description: 'Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany'
                 } %}
@@ -50,7 +50,7 @@ layout: default
         <ul class="unstyled">
             <li class="mb-3">
                 {% include 'list-item.html' with {
-                    href: '/news/',
+                    href: site.url ~ '/news/',
                     title: 'Linguistic Linked Open Data',
                     description: 'The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked
                     Data is "a recommended best practice for exposing, sharing, and connecting pieces of data, information,
@@ -65,7 +65,7 @@ layout: default
         <ul class="unstyled">
             <li class="mb-3">
                 {% include 'document.html' with {
-                    href: '/news/',
+                    href: site.url ~ '/news/',
                     title: 'RE',
                     description: '<i>Standard.</i>This document defines the format used by the Open Language Archives Community OLAC for the interchange of metadata within the framework of the Open Archives Initiative OAI. The metadata set is based on the complete set of Dublin Core metadata terms DCMT, but the format allows for the use of extensions to express community-specific qualifiers.',
                     filesize: 3600
@@ -73,7 +73,7 @@ layout: default
             </li>
             <li class="mb-3">
                 {% include 'document.html' with {
-                    href: '/news/',
+                    href: site.url ~ '/news/',
                     title: 'OLAC Repositories (2008-07-28)  ',
                     description: '<i>Standard.</i>This document defines the standards OLAC archives must follow in implementing a metadata repository.',
                     filesize: 5100

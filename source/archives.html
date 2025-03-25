@@ -23,7 +23,7 @@ layout: default
             {% for i in range(1, 10) %}
             <li class="mb-3">
                 {% include 'list-item.html' with {
-                href: '/archives/aboriginal-studies-electronic-data-archive-aseda',
+                href: site.url ~ '/archives/aboriginal-studies-electronic-data-archive-aseda',
                 title: 'Aboriginal Studies Electronic Data Archive (ASEDA)',
                 description: 'Australian Institute of Aboriginal and Torres Strait Islander Studies, Canberra,
                 Australia'
@@ -31,14 +31,14 @@ layout: default
             </li>
             <li class="mb-3">
                 {% include 'list-item.html' with {
-                href: '/archives/california-language-archive',
+                href: site.url ~ '/archives/california-language-archive',
                 title: 'California Language Archive',
                 description: 'University of California, Berkeley, Department of Linguistic'
                 } %}
             </li>
             <li class="mb-3">
                 {% include 'list-item.html' with {
-                href: '/archives/afbo-a-world-wide-survey-of-affix-borrowing',
+                href: site.url ~ '/archives/afbo-a-world-wide-survey-of-affix-borrowing',
                 title: 'AfBo: A world-wide survey of affix borrowing',
                 description: 'Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany'
                 } %}

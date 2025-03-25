@@ -1,5 +1,5 @@
 <div class="search-input">
-    <form action="/search" method="GET" class="d-flex flex-row h-100" x-data="{}">
+    <form action="{{ site.url }}/search" method="GET" class="d-flex flex-row h-100" x-data="{}">
         <input type="text" name="q" class="search-input-box" placeholder="{{ placeholder }}" required x-init="if(typeof params !== 'undefined') $el.value = params.get('q')">
         <button type="submit" class="search-input-button d-flex flex-row align-items-center justify-content-center">
             <span class="search-input-icon">
