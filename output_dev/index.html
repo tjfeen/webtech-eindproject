@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Home - Sculpin Blog Skeleton</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/assets/css/app.css">
+
+    <!-- Alpine.js -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.9/dist/cdn.min.js" defer></script>
+
+    <!-- Google Fonts (Inter, Hahmlet)-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap utility classes (like p-3, mb-5, etc.) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-utilities.min.css" integrity="sha512-4ocAKAxnrkSm7MvkkF1D435kko3/HWWvoi/U9+7+ln94B/U01Mggca05Pm3W59BIv3abl0U3MPdygAPLo5aeqg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+                </head>
+
+<body>
+    <header>
+        <nav class="navbar p-2">
+            <div class="d-flex flex-row">
+                <a class="navbar-brand" href="/">
+                    <img src="https://picsum.photos/300/300" alt="OLAC LOGO" height="300" width="300">
+                </a>
+                <div class="m-auto d-flex flex-row">
+                    <a class="nav-link mx-3" href="/">Home</a>
+                    <a class="nav-link mx-3" href="/documents">Documents</a>
+                    <a class="nav-link mx-3" href="/archives">Archives</a>
+                    <a class="nav-link mx-3" href="/news">News</a>
+                    <a class="nav-link mx-3" href="/tools">Tools</a>
+                    <a class="nav-link mx-3" href="/about">About</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+    <section class="hero d-flex flex-row align-items-stretch overflow-hidden">
+    <div class="hero-main w-100 d-flex flex-column">
+        <div class="mx-page mt-5">
+            <h1 class="hero-title mb-4">Creating a worldwide virtual library of language resources</h1>
+            <p class="mb-4">
+                The Open Languages Archives Community is an international partnership of institutions and
+                individuals
+                who are creating a worldwide virtual library of language resources.
+            </p>
+            <div class="mb-5">
+                <div class="search-input">
+    <form action="/search" method="GET" class="d-flex flex-row h-100" x-data="{}">
+        <input type="text" name="q" class="search-input-box" placeholder="Search documents, archives, news..." required x-init="if(typeof params !== 'undefined') $el.value = params.get('q')">
+        <button type="submit" class="search-input-button d-flex flex-row align-items-center justify-content-center">
+            <span class="search-input-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+            </span>
+        </button>
+    </form>
+</div>            </div>
+        </div>
+        <div class="hero-gallery d-flex flex-row w-100 mt-auto py-4 position-relative">
+            <div class="hero-gallery-background"></div>
+            <div class="ms-4 d-flex flex-row w-100">
+                                <div class="hero-gallery-item w-100">
+                    <div class="hero-gallery-item-gradient"></div>
+                    <img src="https://picsum.photos/1200/1199" alt="" height="800" width="800" class="w-100 h-100">
+                    <span class="hero-gallery-item-label">
+                        <span class="hero-gallery-item-label-icon me-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        </span>
+                        Hong Kong
+                    </span>
+                </div>
+                                <div class="hero-gallery-item w-100">
+                    <div class="hero-gallery-item-gradient"></div>
+                    <img src="https://picsum.photos/1200/1199" alt="" height="800" width="800" class="w-100 h-100">
+                    <span class="hero-gallery-item-label">
+                        <span class="hero-gallery-item-label-icon me-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                        </span>
+                        Pennsylvania
+                    </span>
+                </div>
+                            </div>
+        </div>
+    </div>
+    <div class="hero-side w-100 pb-4">
+        <div class="hero-thumbnail w-100 h-100">
+            <img src="https://picsum.photos/1200/1200" alt="" height="800" width="800" class="h-100">
+        </div>
+    </div>
+</section>    <section class="news-section py-5">
+        <h2 class="position-relative">
+            <span class="ms-4 section-heading-bullet"></span>
+            <span class="ms-page">News</span>
+        </h2>
+        <div class="news-articles">
+            <div class="news-article py-5 ">
+    <div
+        class="mx-page d-flex align-items-stretch flex-row">
+        <div class="news-article-thumbnail mx-3">
+            <img src="https://picsum.photos/800/800" class="w-100" alt="" />
+        </div>
+        <div class="news-article-content d-flex flex-column mx-3">
+            <h3 class="news-article-title">Linguistic Linked Open Data</h3>
+            <p class="news-article-body">The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is &quot;a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...</p>
+            <div class="mt-auto">
+                <button class="button button-primary d-flex flex-row align-items-center">
+    Read more
+    <div class="button-indicator-wrapper">
+        <div class="button-indicator">
+            <span class="button-indicator-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+            </span>
+        </div>
+    </div>
+</button>            </div>
+        </div>
+    </div>
+</div>            <div class="news-article py-5 news-article-variant">
+    <div
+        class="mx-page d-flex align-items-stretch flex-row-reverse">
+        <div class="news-article-thumbnail mx-3">
+            <img src="https://picsum.photos/800/800" class="w-100" alt="" />
+        </div>
+        <div class="news-article-content d-flex flex-column mx-3">
+            <h3 class="news-article-title">Linguistic Linked Open Data</h3>
+            <p class="news-article-body">The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is &quot;a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...</p>
+            <div class="mt-auto">
+                <button class="button button-primary d-flex flex-row align-items-center">
+    Read more
+    <div class="button-indicator-wrapper">
+        <div class="button-indicator">
+            <span class="button-indicator-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+            </span>
+        </div>
+    </div>
+</button>            </div>
+        </div>
+    </div>
+</div>            <div class="news-article py-5 ">
+    <div
+        class="mx-page d-flex align-items-stretch flex-row">
+        <div class="news-article-thumbnail mx-3">
+            <img src="https://picsum.photos/800/800" class="w-100" alt="" />
+        </div>
+        <div class="news-article-content d-flex flex-column mx-3">
+            <h3 class="news-article-title">Linguistic Linked Open Data</h3>
+            <p class="news-article-body">The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is &quot;a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...</p>
+            <div class="mt-auto">
+                <button class="button button-primary d-flex flex-row align-items-center">
+    Read more
+    <div class="button-indicator-wrapper">
+        <div class="button-indicator">
+            <span class="button-indicator-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+            </span>
+        </div>
+    </div>
+</button>            </div>
+        </div>
+    </div>
+</div>        </div>
+    </section>
+    <section class="join-section d-flex flex-row">
+        <div class="d-flex flex-column join-stats">
+            <div class="join-stat d-flex flex-column">
+                <span class="join-stat-number h1">300,000</span>
+                <span class="join-stat-label">archived records</span>
+            </div>
+            <div class="join-stat d-flex flex-column">
+                <span class="join-stat-number h1">7,513</span>
+                <span class="join-stat-label">languages</span>
+            </div>
+        </div>
+        <div class="join-form text-light w-100">
+            <h2 class="h1 mb-3">Join the community</h2>
+            <p class="mb-4">
+                Sign-up for the OLAC mailing list and stay current with standards and best practices for language resource archiving.
+            </p>
+            <button class="button button-dark d-flex flex-row align-items-center">
+    Sign up now
+    <div class="button-indicator-wrapper">
+        <div class="button-indicator">
+            <span class="button-indicator-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+            </span>
+        </div>
+    </div>
+</button>        </div>
+    </section>
+</main>
+
+    <footer class="footer py-5 mt-auto">
+    <div class="d-flex flex-row mx-page mb-5">
+        <div class="d-flex flex-column w-100 footer-column">
+            <h5 class="footer-heading">Information</h5>
+            <ul class="footer-items unstyled">
+                <li class="footer-item">
+                    <a href="/" class="footer-link">Home</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/news" class="footer-link">News</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Documents</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/tools" class="footer-link">Tools</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/archives" class="footer-link">Archives</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex flex-column w-100 footer-column">
+            <h5 class="footer-heading">About OLAC</h5>
+            <ul class="footer-items unstyled">
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Organization</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/about" class="footer-link">About</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/services" class="footer-link">Services</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/faq" class="footer-link">FAQ</a>
+                </li>
+                <li class="footer-item">
+                    <a href="/archives" class="footer-link">Archives</a>
+                </li>
+            </ul>
+        </div>
+        <div class="d-flex flex-column w-100 footer-column">
+            <h5 class="footer-heading">Contact OLAC</h5>
+            <ul class="footer-items unstyled">
+                <li class="footer-item">
+                    <a href="mailto:olac-admin@language-archives.org" class="footer-link">olac-admin@language-archives.org</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mx-page">
+        <span>http://www.language-archives.org/</span>
+    </div>
+</footer>
+    <script src="/build/app.js"></script>
+        
+
+        </body>
+
+</html>
