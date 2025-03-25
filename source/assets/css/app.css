@@ -13,17 +13,23 @@ body {
     --gray-100: hsl(225, 6%, 97%);
     --gray-200: hsl(225, 6%, 90%);
     --gray-300: hsl(225, 6%, 80%);
-
+    --gray-600: hsl(225, 6%, 30%);
+    --gray-700: hsl(225, 6%, 16%);
     --gray-800: hsl(225, 6%, 13%);
+    --gray-900: hsl(225, 6%, 5%);
     --text-light: var(--gray-50);
-    --text-primary: var(--gray-800);
+    --text-primary: var(--gray-700);
     --text-muted-variant: var(--gray-300);
-    --text-muted: var(--gray-200);
+    --text-muted: var(--gray-600);
     --page-margin-x: 4rem;
     --font-serif: 'Hahmlet', 'Times New Roman', Times, serif;
     --font-sans-serif: 'Inter', Arial, Helvetica, sans-serif;
     margin: 0;
     font-family: var(--font-sans-serif);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: var(--text-primary);
 }
 
 img {
@@ -55,6 +61,10 @@ ul.unstyled, ol.unstyled {
 /* HEADINGS */
 h1, h2, h3, h4, h5, h6, p {
     margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--gray-900);
 }
 
 h1, .h1,
@@ -300,4 +310,53 @@ table td {
 
 table th {
     padding-right: 1rem;
+}
+
+/* SEARCH INPUT */
+.search-input {
+    --search-input-height: 2.5rem;
+    --search-input-padding-x: 0.75rem;
+    height: var(--search-input-height);
+    position: relative;
+    width: 350px;
+}
+
+.search-input-box {
+    border: 1px solid var(--primary-600);
+    background-color: var(--gray-200);
+    border-width: 2px 0px 2px 2px;
+    outline: none;
+    height: 100%;
+    padding-left: var(--search-input-padding-x);
+    /* extra padding because button has absolute positioning */
+    padding-right: calc(var(--search-input-height) + var(--search-input-padding-x));
+    font-family: var(--font-sans-serif);
+    width: 100%;
+}
+
+.search-input-box:focus {
+    box-shadow: 0 0 0 3px var(--primary-200);
+}
+
+.search-input-box::placeholder {
+    color: var(--text-muted);
+}
+
+.search-input-button {
+    background-color: var(--primary-600);
+    color: var(--text-light);
+    height: 100%;
+    width: 2.5rem;
+    cursor: pointer;
+    /* absolute positioning so the focus outline is also around the button */
+    position: absolute;
+    right: 0;
+    border: none;
+}
+
+.search-input-icon {
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    fill: var(--text-light);
 }

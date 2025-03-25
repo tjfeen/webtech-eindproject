@@ -4,18 +4,25 @@ layout: default
 ---
 
 {% block content %}
-<main class="mx-page mb-5">
-    <h1>Archives</h1>
-    <p class="prose">
-        OLAC has 64 participating archives. This page provides a summary; for full details on any archive follow the
-        link on the right.
-    </p>
+<main class="mx-page mb-5 mt-3">
+    <div class="d-flex flex-row w-100">
+        <div class="me-4">
+            <h1>Archives</h1>
+            <p>
+                OLAC has 64 participating archives. This page provides a summary; for full details on any archive follow the
+                link on the right.
+            </p>
+        </div>
+        <div class="ms-auto mt-2">
+            {% include 'search-input.html' with { placeholder: 'Search documents, archives, news...' } %}
+        </div>
+    </div>
     <section class="mt-4">
 
         <ul class="unstyled">
             {% for i in range(1, 10) %}
             <li class="mb-3">
-                {% include 'archives-item.html' with {
+                {% include 'list-item.html' with {
                 href: '/archives/aboriginal-studies-electronic-data-archive-aseda',
                 title: 'Aboriginal Studies Electronic Data Archive (ASEDA)',
                 description: 'Australian Institute of Aboriginal and Torres Strait Islander Studies, Canberra,
@@ -23,14 +30,14 @@ layout: default
                 } %}
             </li>
             <li class="mb-3">
-                {% include 'archives-item.html' with {
+                {% include 'list-item.html' with {
                 href: '/archives/california-language-archive',
                 title: 'California Language Archive',
                 description: 'University of California, Berkeley, Department of Linguistic'
                 } %}
             </li>
             <li class="mb-3">
-                {% include 'archives-item.html' with {
+                {% include 'list-item.html' with {
                 href: '/archives/afbo-a-world-wide-survey-of-affix-borrowing',
                 title: 'AfBo: A world-wide survey of affix borrowing',
                 description: 'Max Planck Institute for Evolutionary Anthropology, Leipzig, Germany'
