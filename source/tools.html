@@ -1,0 +1,57 @@
+---
+title: Tools
+layout: default
+---
+
+{% block content %}
+<main class="mx-page mb-5 mt-3">
+    <div class="d-flex flex-row w-100">
+        <div class="me-4">
+            <h1>Tools</h1>
+            <p>
+                This page lists tools for implementers of OLAC repositories.
+            </p>
+        </div>
+        <div class="ms-auto mt-2">
+            {% include 'search-input.html' with { placeholder: 'Search documents, archives, news...' } %}
+        </div>
+    </div>
+    <section class="mt-4">
+        <h2>Get all OLAC Metadata</h2>
+
+        <ul class="unstyled">
+            <li>
+                {% include 'document.html' with {
+                    title: 'Nightly dump of all OLAC records',
+                    href: '#',
+                    filesize: 2700,
+                    description: 'OLAC XML-format, gzipped.'
+                } %}
+            </li>
+            <li>
+                {% include 'document.html' with {
+                    title: 'Nightly dump of all OLAC records',
+                    href: '#',
+                    filesize: 2600,
+                    description: 'RDF/XML-format, gzipped.'
+                } %}
+            </li>
+        </ul>
+    </section>
+    <section class="mt-4">
+        <h2>Data Providers</h2>
+
+        <ul class="unstyled">
+            <li class="mb-2"><a href="#">OLAC Implementers' FAQ</a></li>
+            <li class="mb-2"><a href="#">Validate/Register an OLAC Data Provider</a></li>
+            <li class="mb-2"><a href="#">Interact with a data provider using the OAI Repository Explorer</a></li>
+            <li class="mb-2"><a href="#">Test the conformance of a repository using the OAI Repository Explorer</a></li>
+            <li class="mb-2"><a href="#">OLAC Metadata usage survey</a></li>
+            <li class="mb-2"><a href="#">OLAC Static Repository Gateway</a></li>
+            <li class="mb-2"><a href="#">Convert BibTeX file to OLAC Static Repository</a></li>
+            <li class="mb-2"><a href="#">OAI Tools</a></li>
+            <li class="mb-2"><a href="#">Sample data provider for AILLA (PHP)</a></li>
+        </ul>
+    </section>
+</main>
+{% endblock %}

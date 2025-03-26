@@ -14,16 +14,19 @@ layout: default
         <div class="news-articles">
             {% include 'news-article.html' with { 
                 title: 'Linguistic Linked Open Data', 
-                body: 'The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is "a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...' 
+                body: 'The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is "a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...' ,
+                img: site.url ~ '/assets/images/news-image-1.jpg'
             } %}
             {% include 'news-article.html' with { 
                 title: 'Archive submission policies', 
                 body: 'As a service to linguists who are in search of an archive that could receive a deposit of language resources they have created, this page lists all of the OLAC participants who have published their submission policy as part of their OLAC repository...',
+                img: site.url ~ '/assets/images/news-image-2.jpg',
                 variant: true
             } %}
             {% include 'news-article.html' with { 
                 title: 'New OLAC Search Service', 
-                body: 'In December 2010, to mark our 10th anniversary, OLAC announces a new search service. Sponsored by the National Science Foundation, and hosted by the University of Pennsylvania Libraries, the service provides powerful search over...' 
+                body: 'In December 2010, to mark our 10th anniversary, OLAC announces a new search service. Sponsored by the National Science Foundation, and hosted by the University of Pennsylvania Libraries, the service provides powerful search over...', 
+                img: site.url ~ '/assets/images/news-image-3.jpg'
             } %}
         </div>
     </section>

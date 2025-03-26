@@ -1,10 +1,4 @@
-<div class="document">
-    <div class="d-flex flex-row">
-        <h4>{{ title }}</h4>
-        <span class="mx-1">&bull;</span>
-        <a href="{{ href }}">Download ({{ filesize / 1000 ~ 'MB' }})</a>
-    </div>
-    <p>
-        {{ description | raw }}
-    </p>
-</div>
+{% include 'list-item.html' with {
+    title, href, description, 
+    label: 'Download (' ~ filesize / 1000 ~ 'MB)'
+} %}
