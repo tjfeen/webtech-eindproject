@@ -2,7 +2,7 @@
 <html>
 
 <head lang="en">
-    <title>Home - Sculpin Blog Skeleton</title>
+    <title>Home - Open Language Archive Community</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/webtech-eindproject/assets/css/app.css">
@@ -25,7 +25,7 @@
         <nav class="navbar p-2">
             <div class="d-flex flex-row">
                 <a class="navbar-brand" href="/webtech-eindproject/">
-                    <img src="https://picsum.photos/300/300" alt="OLAC LOGO" height="300" width="300">
+                    <img src="/webtech-eindproject/assets/images/OLAC-logo.png" alt="OLAC LOGO" height="300" width="300">
                 </a>
                 <div class="m-auto d-flex flex-row">
                     <a class="nav-link mx-3" href="/webtech-eindproject/">Home</a>
@@ -62,11 +62,11 @@
 </div>            </div>
         </div>
         <div class="hero-gallery d-flex flex-row w-100 mt-auto py-4 position-relative">
-            <div class="hero-gallery-background"></div>
+            <div class="hero-gallery-background rulers"></div>
             <div class="ms-4 d-flex flex-row w-100">
                                 <div class="hero-gallery-item w-100">
                     <div class="hero-gallery-item-gradient"></div>
-                    <img src="https://picsum.photos/1200/1199" alt="" height="800" width="800" class="w-100 h-100">
+                    <img src="/webtech-eindproject/assets/images/hong-kong-polytechnic-university.jpg" alt="Hong Kong" height="800" width="800" class="w-100 h-100">
                     <span class="hero-gallery-item-label">
                         <span class="hero-gallery-item-label-icon me-1">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
@@ -76,7 +76,7 @@
                 </div>
                                 <div class="hero-gallery-item w-100">
                     <div class="hero-gallery-item-gradient"></div>
-                    <img src="https://picsum.photos/1200/1199" alt="" height="800" width="800" class="w-100 h-100">
+                    <img src="/webtech-eindproject/assets/images/university-pennsylvannia.jpg" alt="Pennsylvania" height="800" width="800" class="w-100 h-100">
                     <span class="hero-gallery-item-label">
                         <span class="hero-gallery-item-label-icon me-1">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
@@ -89,10 +89,25 @@
     </div>
     <div class="hero-side w-100 pb-4">
         <div class="hero-thumbnail w-100 h-100">
-            <img src="https://picsum.photos/1200/1200" alt="" height="800" width="800" class="h-100">
+            <img src="/webtech-eindproject/assets/images/old-arts-building-melbourne.jpg" alt="Old Arts Building in Melbourne" height="800" width="800" class="h-100">
         </div>
     </div>
-</section>    <section class="news-section py-5">
+</section>
+<script>
+    // make hero thumbnail clip-path responsive
+    (function() {
+        const heroThumbnail = document.querySelector('.hero-thumbnail');
+        const heroGallery = document.querySelector('.hero-gallery');
+
+        function resizeHeroThumbnail() {
+            const heroGalleryHeight = heroGallery.offsetHeight;
+            heroThumbnail.style.setProperty('--hero-gallery-height', heroGalleryHeight+'px');
+        }
+
+        window.addEventListener('resize', resizeHeroThumbnail);
+        window.addEventListener('load', resizeHeroThumbnail)
+    })();
+</script>    <section class="news-section py-5">
         <h2 class="position-relative">
             <span class="ms-4 section-heading-bullet"></span>
             <span class="ms-page">News</span>
@@ -102,7 +117,7 @@
     <div
         class="mx-page d-flex align-items-stretch flex-row">
         <div class="news-article-thumbnail mx-3">
-            <img src="https://picsum.photos/800/800" class="w-100" alt="" />
+            <img src="/webtech-eindproject/assets/images/news-image-1.jpg" class="w-100" alt="" />
         </div>
         <div class="news-article-content d-flex flex-column mx-3">
             <h3 class="news-article-title">Linguistic Linked Open Data</h3>
@@ -120,15 +135,15 @@
 </button>            </div>
         </div>
     </div>
-</div>            <div class="news-article py-5 news-article-variant">
+</div>            <div class="news-article py-5 news-article-variant rulers">
     <div
         class="mx-page d-flex align-items-stretch flex-row-reverse">
         <div class="news-article-thumbnail mx-3">
-            <img src="https://picsum.photos/800/800" class="w-100" alt="" />
+            <img src="/webtech-eindproject/assets/images/news-image-2.jpg" class="w-100" alt="" />
         </div>
         <div class="news-article-content d-flex flex-column mx-3">
-            <h3 class="news-article-title">Linguistic Linked Open Data</h3>
-            <p class="news-article-body">The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is &quot;a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...</p>
+            <h3 class="news-article-title">Archive submission policies</h3>
+            <p class="news-article-body">As a service to linguists who are in search of an archive that could receive a deposit of language resources they have created, this page lists all of the OLAC participants who have published their submission policy as part of their OLAC repository...</p>
             <div class="mt-auto">
                 <button class="button button-primary d-flex flex-row align-items-center">
     Read more
@@ -146,11 +161,11 @@
     <div
         class="mx-page d-flex align-items-stretch flex-row">
         <div class="news-article-thumbnail mx-3">
-            <img src="https://picsum.photos/800/800" class="w-100" alt="" />
+            <img src="/webtech-eindproject/assets/images/news-image-3.jpg" class="w-100" alt="" />
         </div>
         <div class="news-article-content d-flex flex-column mx-3">
-            <h3 class="news-article-title">Linguistic Linked Open Data</h3>
-            <p class="news-article-body">The OLAC system has now been integrated with the Linguistic Linked Open Data Cloud. Linked Data is &quot;a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using...</p>
+            <h3 class="news-article-title">New OLAC Search Service</h3>
+            <p class="news-article-body">In December 2010, to mark our 10th anniversary, OLAC announces a new search service. Sponsored by the National Science Foundation, and hosted by the University of Pennsylvania Libraries, the service provides powerful search over...</p>
             <div class="mt-auto">
                 <button class="button button-primary d-flex flex-row align-items-center">
     Read more
@@ -196,7 +211,7 @@
 </main>
 
     <footer class="footer py-5 mt-auto">
-    <div class="d-flex flex-row mx-page mb-5">
+    <div class="d-flex flex-row mx-page">
         <div class="d-flex flex-column w-100 footer-column">
             <h5 class="footer-heading">Information</h5>
             <ul class="footer-items unstyled">
@@ -245,9 +260,6 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="mx-page">
-        <span>http://www.language-archives.org/</span>
     </div>
 </footer>
     <script src="/webtech-eindproject/build/app.js"></script>

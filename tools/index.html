@@ -2,7 +2,7 @@
 <html>
 
 <head lang="en">
-    <title>Tags - Open Language Archive Community</title>
+    <title>Tools - Open Language Archive Community</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="/webtech-eindproject/assets/css/app.css">
@@ -39,10 +39,70 @@
         </nav>
     </header>
     
-    <h2>Tags</h2>
+    <main class="mx-page mb-5 mt-3">
+    <div class="d-flex flex-row w-100">
+        <div class="me-4">
+            <h1>Tools</h1>
+            <p>
+                This page lists tools for implementers of OLAC repositories.
+            </p>
+        </div>
+        <div class="ms-auto mt-2">
+            <div class="search-input">
+    <form action="/webtech-eindproject/search" method="GET" class="d-flex flex-row h-100" x-data="{}">
+        <input type="text" name="q" class="search-input-box" placeholder="Search documents, archives, news..." required x-init="if(typeof params !== 'undefined') $el.value = params.get('q')">
+        <button type="submit" class="search-input-button d-flex flex-row align-items-center justify-content-center">
+            <span class="search-input-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+            </span>
+        </button>
+    </form>
+</div>        </div>
+    </div>
+    <section class="mt-4">
+        <h2>Get all OLAC Metadata</h2>
 
-<div>
-</div>
+        <ul class="unstyled">
+            <li>
+                <div class="list-item">
+    <div class="d-flex flex-row">
+        <h4>Nightly dump of all OLAC records</h4>
+        <span class="mx-1">&bull;</span>
+        <a href="#">Download (2.7MB)</a>
+    </div>
+    <p>
+        OLAC XML-format, gzipped.
+    </p>
+</div>            </li>
+            <li>
+                <div class="list-item">
+    <div class="d-flex flex-row">
+        <h4>Nightly dump of all OLAC records</h4>
+        <span class="mx-1">&bull;</span>
+        <a href="#">Download (2.6MB)</a>
+    </div>
+    <p>
+        RDF/XML-format, gzipped.
+    </p>
+</div>            </li>
+        </ul>
+    </section>
+    <section class="mt-4">
+        <h2>Data Providers</h2>
+
+        <ul class="unstyled">
+            <li class="mb-2"><a href="#">OLAC Implementers' FAQ</a></li>
+            <li class="mb-2"><a href="#">Validate/Register an OLAC Data Provider</a></li>
+            <li class="mb-2"><a href="#">Interact with a data provider using the OAI Repository Explorer</a></li>
+            <li class="mb-2"><a href="#">Test the conformance of a repository using the OAI Repository Explorer</a></li>
+            <li class="mb-2"><a href="#">OLAC Metadata usage survey</a></li>
+            <li class="mb-2"><a href="#">OLAC Static Repository Gateway</a></li>
+            <li class="mb-2"><a href="#">Convert BibTeX file to OLAC Static Repository</a></li>
+            <li class="mb-2"><a href="#">OAI Tools</a></li>
+            <li class="mb-2"><a href="#">Sample data provider for AILLA (PHP)</a></li>
+        </ul>
+    </section>
+</main>
 
     <footer class="footer py-5 mt-auto">
     <div class="d-flex flex-row mx-page">
